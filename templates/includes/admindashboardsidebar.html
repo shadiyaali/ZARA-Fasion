@@ -1,0 +1,15 @@
+<aside class="col-md-3">
+    <!--   SIDEBAR   -->
+    <ul class="list-group " id="ordermanagement-nav">
+        <a class="list-group-item text-align-end {% if '/dashboard/' in request.path %}active{% endif %}" href="{% url 'manager_dashboard' %}" ><i class="fa fa-database icons" aria-hidden="true"></i> Dashboard </a>
+        <a class="list-group-item text-align-end {% if '/manage_user/' in request.path %}active{% endif %}"  href="{% url 'manage_user' %}"><i class="fa fa-users icons" aria-hidden="true"></i> User Management  </a>
+        <a class="list-group-item text-align-end {% if '/manage_product/' in request.path %}active{% endif %}" href="{% url 'manage_product' %}"><i class="fa fa-cubes icons" aria-hidden="true"></i> Product Management </a>
+        <a class="list-group-item text-align-end {% if '/manage_category/' in request.path %}active{% endif %}" href="{% url 'manage_category' %}"><i class="fa fa-cube icons" aria-hidden="true"></i>Category Management </a> 
+        <a class="list-group-item text-align-end {% if '/order_management/' in request.path %}active{% endif %}" href="{% url 'order_management' %}"><i class="fa fa-cube icons" aria-hidden="true"></i> Order Management </a> 
+        <a class="list-group-item text-align-end {% if '/variation_management/' in request.path %}active{% endif %}" href="{% url 'variation_management' %}"><i class="fa fa-cube icons" aria-hidden="true"></i> Variation Management </a> 
+        <a class="list-group-item text-align-end {% if '/manage_multiple_image/' in request.path %}active{% endif %}" href="{% url 'multiple_image_management' %}"><i class="fa fa-file-image-o icons" aria-hidden="true"></i> Multiple Images Management</a> 
+        <a class="list-group-item text-align-end {% if '/review_management/' in request.path %}active{% endif %}" href="{% url 'review_management' %}"><i class="fa fa-cube icons" aria-hidden="true"></i> Review Management </a>
+    <br>
+    <a class="btn btn-danger text-whit btn-block" href="{% url 'manager_logout' %}"> <i class="fa fa-power-off text-white"></i> <span class="text text-white">Log out</span> </a> 
+    <!--   SIDEBAR .//END   -->
+</aside>

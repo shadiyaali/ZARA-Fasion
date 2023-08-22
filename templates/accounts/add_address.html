@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="section-content padding-y bg">
+    <div class="container">
+    
+    <!-- ============================ COMPONENT 1 ================================= -->
+
+  <div class="row">
+    <aside class="col-lg-6">
+   <div class="card">
+    <div class="card-body">
+      <form action="{% url 'placeorder' %} " method="POST">
+        {% csrf_token %}
+      <h4 class= "card-title mb-4">Add  Address</h4>
+       
+      <div class="form-row">
+        <div class="col form-group">
+          <label for="">First Name</label>
+          <input type="text" name="first_name" class="form-control" required
+            value=" ">
+        </div>
+        <div class="col form-group">
+          <label for="">Last Name</label>
+          <input type="text" name="last_name" class="form-control" required
+            value=" ">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col form-group">
+          <label for="">Email</label>
+          <input type="email" name="email" class="form-control" required value="">
+        </div>
+        <div class="col form-group">
+          <label for="">Phone Number</label>
+          <input type="text" name="phone" class="form-control" required value="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col form-group">
+          <label for="">Address</label>
+          <textarea name="address" rows="2" class="form-control"></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col form-group">
+          <label for="">City</label>
+          <input type="text" name="city" class="form-control" required value=" ">
+        </div>
+        <div class="col form-group">
+          <label for="">State</label>
+          <input type="text" name="state" class="form-control" required value=" ">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col form-group">
+          <label for="">Country</label>
+          <input type="text" name="country" class="form-control" required value=" ">
+        </div>
+        <div class="col form-group">
+          <label for="">Pincode</label>
+          <input type="number" name="pincode" class="form-control" required value=" ">
+        </div>
+            
+        
+        <input type="submit" value="Save" class="btn btn-info">
+        
+     
+         </div>
+       </div> <!-- card.// -->
+          
+          </aside> <!-- col.// -->
+              <aside class="col-lg-6">
+          
+                
+
+    </aside> <!-- col.// -->
+    
+    
+    </div> <!-- row.// -->    
+
+    <!-- ============================ COMPONENT 1 END .// ================================= -->
+    
+    </div> <!-- container .//  -->
+    </section>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js" type="application/javascript"></script>
+    <script src="{% static 'js\checkout.js' %}"></script>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/mixitup.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    
+
+    
+
+
+
+{% endblock %}
+
+{% block scripts %}  
+
+    {% endblock scripts %}
+
+ 
