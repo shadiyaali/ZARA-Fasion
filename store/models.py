@@ -2,13 +2,14 @@ from django.db import models
 from django.urls import reverse
 from category.models import Category
 from accounts.models import Account
-from autoslug import AutoSlugField
+ 
+ 
 
 
 # Create your models here.
 class Product(models.Model):
     product_name = models.CharField(max_length=200, unique=True)
-    slug         = AutoSlugField(populate_from='product_name',null=True, default=None, max_length=200, unique=True)
+    slug         = models.SlugField(max_length=100, unique=True ,null=True)
     description  = models.TextField(max_length=200, blank=True)
     price        = models.IntegerField()
     images       = models.ImageField(upload_to='photos/products')

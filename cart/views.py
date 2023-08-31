@@ -209,6 +209,7 @@ def checkout(request, total=0, quantity=0, cart_items=None):
     
         tax = 0
         grand_total = 0
+        userprofile = None
         try:
 
             if request.user.is_authenticated:
